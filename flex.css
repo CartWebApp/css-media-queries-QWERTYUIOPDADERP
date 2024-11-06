@@ -63,13 +63,33 @@
 }
 
 /* Tablet Styles*/
+@media screen and (max-width: 1024px){
+  .third, .quarter {
+    width: 48%;
+  }
 
+  .flex-container {
+    height: fit-content;
+  }
 
-
+  [class^="box"]:last-child{
+    /* width: 97%; */
+    flex-grow: 1;
+  }
+}
 
 /* Mobile Styles*/
+@media screen and (max-width: 520px) {
+  [class^="box"]{
+    width: 97%;
+    /* height: fit-content; */
+  }
+}
 
-
-
-
-
+/*
+Need to remember to use 'and' instead of &&
+Max-width indicates if screen below set point:
+  - 520px for mobile
+  - 1024 for tablet
+Percents are more flexible, so use them for the Trion site
+*/
